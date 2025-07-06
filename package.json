@@ -22,9 +22,9 @@
 	"icon": "assets/copilot.png",
 	"pricing": "Trial",
 	"engines": {
-		"vscode": "^1.102.0-20250627",
+		"vscode": "^1.96.0",
 		"npm": ">=9.0.0",
-		"node": ">=22.14.0"
+		"node": ">=20.19.3"
 	},
 	"categories": [
 		"AI",
@@ -2834,8 +2834,14 @@
 						},
 						"additionalProperties": {
 							"type": "boolean",
-							"enum": [true, false],
-							"enumDescriptions": ["%github.copilot.config.agent.terminal.allowList.value.true%", "%github.copilot.config.agent.terminal.allowList.value.false%"],
+							"enum": [
+								true,
+								false
+							],
+							"enumDescriptions": [
+								"%github.copilot.config.agent.terminal.allowList.value.true%",
+								"%github.copilot.config.agent.terminal.allowList.value.false%"
+							],
 							"description": "%github.copilot.config.agent.terminal.allowList.key%"
 						},
 						"tags": [
@@ -2863,7 +2869,10 @@
 								true,
 								false
 							],
-							"enumDescriptions": ["%github.copilot.config.agent.terminal.denyList.value.true%", "%github.copilot.config.agent.terminal.denyList.value.false%"],
+							"enumDescriptions": [
+								"%github.copilot.config.agent.terminal.denyList.value.true%",
+								"%github.copilot.config.agent.terminal.denyList.value.false%"
+							],
 							"description": "%github.copilot.config.agent.terminal.denyList.key%"
 						},
 						"tags": [
@@ -3756,7 +3765,7 @@
 		"@vscode/test-cli": "^0.0.11",
 		"@vscode/test-electron": "^2.5.2",
 		"@vscode/test-web": "^0.0.70",
-		"@vscode/vsce": "3.6.0",
+		"@vscode/vsce": "^3.6.0",
 		"@vscode/zeromq": "0.2.7",
 		"csv-parse": "^5.6.0",
 		"dotenv": "^16.5.0",
@@ -3820,6 +3829,8 @@
 		"lru-cache": "^11.1.0",
 		"markdown-it": "^14.1.0",
 		"minimatch": "^10.0.3",
+		"sqlite": "^5.1.1",
+		"sqlite3": "^5.1.7",
 		"undici": "^7.10.0",
 		"vscode-languageserver-textdocument": "^1.0.12",
 		"vscode-tas-client": "^0.1.84",
