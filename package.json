@@ -2418,6 +2418,14 @@
 							"preview"
 						],
 						"markdownDescription": "%github.copilot.config.byok.ollamaEndpoint%"
+					},
+					"github.copilot.chat.byok.vllmEndpoint": {
+						"type": "string",
+						"default": "http://localhost:8888",
+						"tags": [
+							"preview"
+						],
+						"markdownDescription": "%github.copilot.config.byok.vllmEndpoint%"
 					}
 				}
 			},

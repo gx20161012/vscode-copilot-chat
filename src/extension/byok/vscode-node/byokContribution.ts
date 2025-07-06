@@ -16,6 +16,7 @@ import { BYOKAuthType, BYOKKnownModels, BYOKModelConfig, BYOKModelRegistry, isBY
 import { AnthropicBYOKModelRegistry } from '../../byok/vscode-node/anthropicProvider';
 import { AzureBYOKModelRegistry } from '../../byok/vscode-node/azureProvider';
 import { OAIBYOKModelRegistry } from '../../byok/vscode-node/openAIProvider';
+import { VllmBYOKModelRegistry } from '../../byok/vscode-node/vllmProvider';
 import { IExtensionContribution } from '../../common/contributions';
 import { BYOKStorageService, IBYOKStorageService } from './byokStorageService';
 import { BYOKUIService, ModelConfig } from './byokUIService';
@@ -75,6 +76,7 @@ export class BYOKContrib extends Disposable implements IExtensionContribution {
 			this._modelRegistries.push(instantiationService.createInstance(GeminiBYOKModelRegistry));
 			this._modelRegistries.push(instantiationService.createInstance(GroqModelRegistry));
 			this._modelRegistries.push(instantiationService.createInstance(OAIBYOKModelRegistry));
+			this._modelRegistries.push(instantiationService.createInstance(VllmBYOKModelRegistry, this._configurationService.getConfig(ConfigKey.VllmEndpoint)));
 			this._modelRegistries.push(instantiationService.createInstance(OllamaModelRegistry, this._configurationService.getConfig(ConfigKey.OllamaEndpoint)));
 			this._modelRegistries.push(instantiationService.createInstance(OpenRouterBYOKModelRegistry));
 			// Update known models list from CDN so all providers have the same list
